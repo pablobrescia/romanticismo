@@ -1,0 +1,122 @@
+
+/************************************************************/
+/* Web del Romanticismo                                     */
+/* Hoja de estilos de la canción del Pirata                 */
+/* Autor: Pablo Brescia                                     */
+/* Versión 1.0                                              */
+/************************************************************/
+
+
+/*********************** ESTILO GENERAL *********************/
+
+@font-face {
+    src: url('../fonts/ChopinScript.ttf');
+    font-family: titulos;
+}
+
+@font-face {
+    src: url('../fonts/Poppins-Regular.ttf');
+    font-family: textos;
+}
+
+* {box-sizing: border-box;}
+
+body { margin:0; padding:0;  /*Elimina los bordes por defecto*/
+    font-family:textos;
+    background-color: lightblue;
+    
+}
+
+#wrapper {width: 80%;
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    margin: auto;
+
+}
+
+/**************** HERO SECTION OPCION 1: FOTO + TEXTO *******************/
+#hero {background-image: url(../images/herosection.jpg);
+    height: 100vh; /* Para obligar a que se vea más allá del contenido */
+    background-repeat: no-repeat; /* No repite el fondo */
+    background-size: cover; /* Cubre todo el fondo */
+    background-position: 50%;
+    padding-left: 3%;
+    padding-top: 3%;
+
+}
+
+/*********** HERO SECTION OPCION 2: HAIKEI.APP + POSITION + FROASTED GLASS***********/
+#hero2 {background-image: url(../images/poligonos.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    position: relative; /* Hero se mueve de sitio*/
+
+}
+
+#titulo2 {font-family: titulos;
+    font-size: 4rem;
+    background-color: rgba(255, 255, 255, 0.158);
+    width: 50%;
+    text-align: center; /* También podríamos poner un padding-left */
+    
+        /* Estas cuatro reglas colocan una caja en el centro de otra: */
+    position: absolute; /* Se fija dentro del bloque al que pertenece (hero) */
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+    /* Para el efecto froasted glass (el fondo debe ser blanco y con opacidad < a 0.5)*/
+    backdrop-filter: blur(3px);
+
+}
+
+/**************** HERO 3: COLOR LISO + GETWAVES *******************/
+#hero3 {
+    background-color: #ff5500; /* MISMO COLOR QUE LAS OLAS */
+    height:40vh;
+    position: relative;
+
+}
+
+#titulo3 {font-family: titulos;
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+#intro {background-color: blue;}
+
+#titulo {
+    background-color: rgba(255, 255, 255, 0.411);
+    width:28%;
+    padding:2%;
+    text-align:center;
+    border-radius: 45%;
+    font-family: titulos;
+    font-size: 3rem; 
+}
+
+/***************** MEDIA QUERIES ******************/
+@media only screen and (width<=1250px) {
+    #wrapper {width:90%;}
+    #titulo {width: 30%;}
+}
+
+@media only screen and (width<=1050px) {
+    #titulo {width: 40%;}
+}
+
+@media only screen and (width<=750px) {
+    #titulo {width: 50%;}
+    #titulo {font-size: 2rem;}
+}
+
+@media only screen and (width<=500px) {
+    #wrapper {width:100%;}
+    #titulo {width: 80%;}
+}
